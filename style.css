@@ -1,0 +1,43 @@
+@font-face {
+    font-family: bold;
+    src: url(Font/plusjakartasans-bold.woff2);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(Font/plusjakartasans-Medium.woff2);
+}
+
+@font-face {
+    font-family: reg;
+    src: url(Font/plusjakartasans-Regular.woff2);
+}
+
+* {
+    font-family: reg;
+}
+
+.title {
+    font-size: 18px;
+    letter-spacing: 1.4px;
+}
+
+.produk-nama {
+    font-size: 20px;
+    font-family: bold;
+}
+
+.produk-text {
+    font-size: 14px;
+}
+
+.judul-merah {
+    line-height: 20px;
+    font-size: 24px;
+    font-family: bold;
+    color: #DA4443;
+}
+
+.caption {
+    margin-top: 36px;
+}

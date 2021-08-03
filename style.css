@@ -28,6 +28,16 @@
     font-family: bold;
 }
 
+.produk-nama-lainnya {
+    font-size: 18px;
+    font-family: 'reg';
+    font-style: italic;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-top: 8px;
+}
+
 .produk-text {
     font-size: 14px;
 }
@@ -81,4 +91,14 @@
   
   .separator:not(:empty)::after {
     margin-left: 18px;
+  }
+
+  .box-produk-lainnya {
+      padding-bottom: 50px;
+  }
+
+  .img-produk-lainnya {
+    min-height: 240px;
+    width: auto !important;
+    margin: auto !important;
   }

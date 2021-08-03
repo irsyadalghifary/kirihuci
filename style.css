@@ -20,6 +20,7 @@
 .title {
     font-size: 18px;
     letter-spacing: 1.4px;
+    line-height: 23px;
 }
 
 .produk-nama {
@@ -32,12 +33,52 @@
 }
 
 .judul-merah {
-    line-height: 20px;
+    line-height: 30px;
     font-size: 24px;
     font-family: bold;
     color: #DA4443;
+    letter-spacing: 0.1em;
 }
 
 .caption {
     margin-top: 36px;
 }
+
+.my-page-link {
+    padding: .25rem .5rem;
+    text-decoration: None;
+    color: #DA4443;
+}
+
+.my-page-active {
+    color: black;
+}
+
+.my-button {
+    width: fit-content;
+    border-radius: 50px;
+    background: #DA4443;
+    padding: 4px 24px;
+    color: white;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1.5px solid #878787;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: 18px;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: 18px;
+  }

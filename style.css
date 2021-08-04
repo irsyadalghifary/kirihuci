@@ -17,6 +17,13 @@
     font-family: reg;
 }
 
+.oleh-oleh {
+    font-size: 18px;
+    font-family: bold;
+    margin-bottom: 0px;
+    padding-top: 16px;
+}
+
 .title {
     font-size: 18px;
     letter-spacing: 1.4px;
@@ -40,4 +47,11 @@
 
 .caption {
     margin-top: 36px;
+}
+
+.caption-footer {
+    font-size: 12px;
+    font-family: bold;
+    padding: 10px;
+    margin-bottom: -10px;
 }

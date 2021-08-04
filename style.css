@@ -69,6 +69,11 @@
     border-radius: 50px;
     background: #DA4443;
     padding: 4px 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.my-button:hover {
     color: white;
 }
 
@@ -76,29 +81,76 @@
     display: flex;
     align-items: center;
     text-align: center;
-  }
-  
-  .separator::before,
-  .separator::after {
+}
+
+.separator::before,
+.separator::after {
     content: '';
     flex: 1;
     border-bottom: 1.5px solid #878787;
-  }
-  
-  .separator:not(:empty)::before {
+}
+
+.separator:not(:empty)::before {
     margin-right: 18px;
-  }
-  
-  .separator:not(:empty)::after {
+}
+
+.separator:not(:empty)::after {
     margin-left: 18px;
-  }
+}
 
-  .box-produk-lainnya {
-      padding-bottom: 50px;
-  }
+.box-produk-lainnya {
+    padding-bottom: 50px;
+}
 
-  .img-produk-lainnya {
+.img-produk-lainnya {
     min-height: 240px;
     width: auto !important;
     margin: auto !important;
-  }
+}
+
+.produk-deskripsi {
+    font-weight: normal;
+    text-align: justify;
+}
+
+.img-produk-main {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.img-produk-additional {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.wa-button {
+    width: fit-content;
+    border-radius: 50px;
+    background: #73C578;
+    padding: 4px 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.wa-button:hover {
+    color: white;
+}
+
+.row-produk-detail {
+    color: #747474;
+}
+
+.produk-detail-body {
+    text-align: justify;
+    font-size: 12px;
+}
+
+.produk-detail-body * {
+    margin: 1px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .produk-deskripsi {
+        min-height: 280px;
+    }
+}

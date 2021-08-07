@@ -144,7 +144,7 @@
           <div class="col-sm-12 col-md-6">
             <div class="row">
               <div class="col">
-                <img
+                <img id="product-image"
                   class="img-produk-main"
                   src="asset/main-product-image.png"
                 />
@@ -237,23 +237,25 @@
           <div class="col-sm-12 col-md-6">
             <div class="row">
               <div class="col">
-                <p class="judul-merah mt-5">
+                <p id="product-title" class="judul-merah mt-5">
                   TEPUNG MOBI (MODIFIKASI UBI) CILEMBU 1 KG
                 </p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p>Rp. 35.000,00</p>
+                <p id="product-price">Rp. 35.000,00</p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p class="produk-deskripsi">
-                  Tepung ini berasal dari modifikasi Ubi Cilembu Asli yang cocok
-                  untuk tambahan membuat cake, kue, dan makanan lainnya.
-                  Kandungan lemak lebih rendah sehingga baik untuk kesehatan.
-                </p>
+                <div id="product-description" class="produk-deskripsi">
+                  <p>
+                    Tepung ini berasal dari modifikasi Ubi Cilembu Asli yang cocok
+                    untuk tambahan membuat cake, kue, dan makanan lainnya.
+                    Kandungan lemak lebih rendah sehingga baik untuk kesehatan.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -266,7 +268,7 @@
                 <div class="produk-detail-head">
                   <h6 class="fw-bold">INFO PRODUK</h6>
                 </div>
-                <div class="produk-detail-body">
+                <div id="product-notes" class="produk-detail-body">
                   <p>Produk KIRIHUCI telah memiliki:</p>
                   <ul>
                     <li>Sertifikasi Halal</li>
@@ -280,7 +282,7 @@
                 <div class="produk-detail-head">
                   <h6 class="fw-bold">INFO PENGIRIMAN</h6>
                 </div>
-                <div class="produk-detail-body">
+                <div id="product-shipping-notes" class="produk-detail-body">
                   <p>
                     Kirihuci dapat dikirimkan ke berbagai wilayah di Indonesia.
                   </p>
@@ -290,7 +292,7 @@
                 <div class="produk-detail-head">
                   <h6 class="fw-bold">UKURAN PRODUK</h6>
                 </div>
-                <div class="produk-detail-body">
+                <div id="product-dimension" class="produk-detail-body">
                   <p>100 gr</p>
                 </div>
               </div>
@@ -451,5 +453,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="product-detail.js"></script>
   </body>
 </html>

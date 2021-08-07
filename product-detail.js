@@ -2,7 +2,7 @@ $(function () {
   const params = new URLSearchParams(window.location.search);
 
   const get_product_detail = (product_id) => {
-    const product_detail_endpoint = `http://kirihuci-api.herokuapp.com/products/${product_id}/:detail`
+    const product_detail_endpoint = `https://kirihuci-api.herokuapp.com/products/${product_id}/:detail`
   
     $.ajax({
       url: product_detail_endpoint,
@@ -28,7 +28,7 @@ $(function () {
   }
   
   const get_recommendations = (product_id) => {
-    const recommendations_endpoint = `http://kirihuci-api.herokuapp.com/products/?sort=DESC`
+    const recommendations_endpoint = `https://kirihuci-api.herokuapp.com/products/?sort=DESC`
   
     $.ajax({
       url: recommendations_endpoint,

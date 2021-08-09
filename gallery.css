@@ -1,0 +1,19 @@
+[id^="gallery-photo-"].skeleton {
+    width: 100%;
+    height: 340px;
+}
+
+[id^="gallery-video-"].skeleton {
+    width: 100%;
+    height: 350px;
+}
+
+#pagination-photo.skeleton {
+    height: 30px;
+    width: 100px;
+}
+
+#pagination-video.skeleton {
+    height: 30px;
+    width: 100px;
+}

@@ -10,17 +10,41 @@ $(function () {
       success: (response) => {
         if (response.length > 0) {
           const product = response[0]
-          $('#product-image').html(`<img class="img-produk-main" src="${product.image}"/>`)
+          const product_image = $(`<img class="img-produk-main" src="${product['image']}"/>`)
+
+          const carousel_length = 4
+          let carousels = ''
+          const datas = product['additional_images']
+          for (let i = 0; i <= datas.length; i += carousel_length) {
+            carousels += `<div class='carousel-item ${i == 0 ? 'active': ''}'>`
+            carousels += '\n'
+            carousels += `<div class="row">`
+            for (let j = i; j < Math.min(i + carousel_length, datas.length); j++) {
+              const data = datas[j]
+              carousels += '\n'
+              carousels += `
+                <div class="col-${parseInt(12 / carousel_length)}">
+                  <img src="${data['image']}" class="img-produk-additional"/>
+                </div>
+              `
+            }
+            carousels += '</div> '
+            carousels += '\n'
+            carousels += '</div> '
+          }
           //carousel for additional images
           on_all_image_loaded({
-            env: $('#product'),
+            envs: [$(product_image), $(carousels)],
             callback: () => {
-              $('#product-title').html(product.name)
-              $('#product-price').html(`Rp. ${product.price},00`)
-              $('#product-description').html(product.description)
-              $('#product-notes').html(product.notes)
-              $('#product-shipping-notes').html(product.shipping_notes)
-              $('#product-dimension').html(product.dimension)
+              $('#product-image').html(product_image)
+              $('#product-carousel-additional-image').append(carousels)
+
+              $('#product-title').html(product['name'])
+              $('#product-price').html(`Rp. ${product['price'].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")},00`)
+              $('#product-description').html(product['description'])
+              $('#product-notes').html(product['notes'])
+              $('#product-shipping-notes').html(product['shipping_notes'])
+              $('#product-dimension').html(product['dimension'])
               $('#product .skeleton').removeClass('skeleton')
               $('#product .wait-skeleton').removeClass('wait-skeleton')
             }
@@ -43,22 +67,22 @@ $(function () {
       success: (response) => {
         const carousel_length = 4
 
-        const datas = response.data
+        const datas = response['data']
         let carousels = ''
-        for (let i = 0; i <= response.count; i += carousel_length) {
+        for (let i = 0; i <= response['count']; i += carousel_length) {
           carousels += `<div class='carousel-item ${i == 0 ? 'active': ''}'>`
           carousels += '\n'
           carousels += `<div class="row">`
-          for (let j = i; j < Math.min(i + carousel_length, response.count); j++) {
+          for (let j = i; j < Math.min(i + carousel_length, response['count']); j++) {
             const data = datas[j]
             carousels += '\n'
             carousels += `
-              <div class="col-3">
+              <div class="col-${parseInt(12 / carousel_length)}">
                 <div class="h-100">
-                  <img src="${data.image}" class="card-img-top"/>
+                  <img src="${data['image']}" class="card-img-top"/>
                   <div class="text-center mt-3">
-                    <h5 class="produk-nama text-uppercase">${data.name}</h5>
-                    <p class="produk-text">Rp. ${data.price}</p>
+                    <div class="produk-nama text-uppercase">${data['name']}</div>
+                    <p class="produk-text">Rp. ${data['price']}</p>
                   </div>
                 </div>
               </div>
@@ -70,7 +94,7 @@ $(function () {
         }
         //carousel_html
         on_all_image_loaded({
-          env: $(carousels),
+          envs: [$(carousels)],
           callback: () => {
             $('#product-carousel-recommendation').append(carousels)
             $('#recommendation .skeleton').removeClass('skeleton')

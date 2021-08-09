@@ -31,8 +31,10 @@
 }
 
 .produk-nama {
-    font-size: 20px;
+    font-size: 14px;
     font-family: bold;
+    font-weight: 700;
+    line-height: 20px;
 }
 
 .produk-nama-lainnya {
@@ -125,6 +127,8 @@
 .produk-deskripsi {
     font-weight: normal;
     text-align: justify;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 .img-produk-main {
@@ -141,7 +145,7 @@
     width: fit-content;
     border-radius: 50px;
     background: #73C578;
-    padding: 4px 24px;
+    padding: 4px 16px;
     color: white;
     text-decoration: none;
 }
@@ -171,4 +175,8 @@
 
 .my-pt-120 {
     padding-top: 120px;
+}
+
+.my-pt-60 {
+    padding-top: 60px;
 }

@@ -27,4 +27,8 @@ $(function () {
       }
     }
   }
+
+  window.format_price = (value) => {
+    return `Rp. ${value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")},00`
+  }
 })

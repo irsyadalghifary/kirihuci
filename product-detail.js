@@ -40,7 +40,7 @@ $(function () {
               $('#product-carousel-additional-image').append(carousels)
 
               $('#product-title').html(product['name'])
-              $('#product-price').html(`Rp. ${product['price'].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")},00`)
+              $('#product-price').html(format_price(product['price']))
               $('#product-description').html(product['description'])
               $('#product-notes').html(product['notes'])
               $('#product-shipping-notes').html(product['shipping_notes'])
@@ -82,7 +82,7 @@ $(function () {
                   <img src="${data['image']}" class="card-img-top"/>
                   <div class="text-center mt-3">
                     <div class="produk-nama text-uppercase">${data['name']}</div>
-                    <p class="produk-text">Rp. ${data['price']}</p>
+                    <p class="produk-text">${format_price(data['price'])}</p>
                   </div>
                 </div>
               </div>

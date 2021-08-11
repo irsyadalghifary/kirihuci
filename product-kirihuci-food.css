@@ -1,0 +1,9 @@
+[id^="product-kirihuci-new-"].skeleton {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+[id^="product-kirihuci-"].skeleton {
+    width: 100%;
+    height: 400px;
+}

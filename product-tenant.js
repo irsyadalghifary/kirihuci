@@ -15,7 +15,7 @@ $(function () {
         for (let i = 0; i < products_per_page; i++) {
           $('#product-tenant>.row').append(`
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <div id="product-tenant-${(current_product_page - 1) * products_per_page + i + 1}" class="skeleton"></div>
+            <div id="product-tenant-${(page - 1) * products_per_page + i + 1}" class="skeleton"></div>
           </div>
           `)
         }
@@ -43,7 +43,7 @@ $(function () {
           envs: [...products.map(p => $(p))],
           callback: () => {
             for (let i = 0; i < products.length; i++) {
-              $(`#product-tenant-${(current_product_page - 1) * products_per_page + i + 1}`).html(products[i])
+              $(`#product-tenant-${(page - 1) * products_per_page + i + 1}`).html(products[i])
             }
 
             $('#product-tenant .skeleton').removeClass('skeleton')
@@ -63,8 +63,7 @@ $(function () {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement
 
     if (scrollTop + clientHeight >= scrollHeight - 5 && (total_products > (current_product_page * products_per_page))) {
-      ++current_product_page
-      get_product_tenant(current_product_page)
+      get_product_tenant(++current_product_page)
     }
   }, { passive: true })
 })

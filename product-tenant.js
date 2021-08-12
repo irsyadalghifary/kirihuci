@@ -28,7 +28,7 @@ $(function () {
 
         for (let i = 0; i < response['count']; i++) {
           const data = datas[i]
-          const product_detail_url = `/product-detail.html?id=${data['id']}`
+          const product_detail_url = `./product-detail.html?id=${data['id']}`
           products.push(`
           <img src="${data['image']}" class="card-img-top"/>
           <div class="text-center mt-3">

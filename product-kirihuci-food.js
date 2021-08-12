@@ -32,7 +32,7 @@ $(function () {
         let products = []
         for (let i = 0; i < response['count'] - new_product_limit; i++) {
           const data = datas[i]
-          const product_detail_url = `/product-detail.html?id=${data['id']}`
+          const product_detail_url = `./product-detail.html?id=${data['id']}`
           products.push(`
           <img src="${data['image']}" class="card-img-top"/>
           <div class="text-center mt-3">
@@ -59,7 +59,7 @@ $(function () {
         let new_products = []
         for (let i = 0; i < new_product_limit; i++) {
           const data = datas[response['count'] - 1 - i]
-          const product_detail_url = `/product-detail.html?id=${data['id']}`
+          const product_detail_url = `./product-detail.html?id=${data['id']}`
           new_products.push(`
           <img src="${data['image']}" class="card-img-top"/>
           <div class="text-center mt-3">

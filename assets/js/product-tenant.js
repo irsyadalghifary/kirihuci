@@ -1,3 +1,5 @@
+document.getElementById('nav-product').classList.add('active')
+
 let current_product_page = 1
 const products_per_page = 6
 let total_products = 0

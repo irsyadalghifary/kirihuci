@@ -1,3 +1,5 @@
+document.getElementById('nav-product').classList.add('active')
+
 const new_product_limit = 4
 
 $(function () {

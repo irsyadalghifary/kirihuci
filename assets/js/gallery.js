@@ -1,3 +1,5 @@
+document.getElementById('nav-gallery').classList.add('active')
+
 let current_photo_page = 1
 let current_video_page = 1
 

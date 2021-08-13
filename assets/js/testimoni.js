@@ -1,0 +1,1 @@
+document.getElementById('nav-testimony').classList.add('active')

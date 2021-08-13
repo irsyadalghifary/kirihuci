@@ -46,6 +46,12 @@
     border-top-color: #DA4443 !important;
 }
 
+.dropdown-item {
+    font-family: bold;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
 nav .btn:focus {
     box-shadow: none !important;
 }

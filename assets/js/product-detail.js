@@ -1,3 +1,5 @@
+document.getElementById('nav-product').classList.add('active')
+
 $(function () {
   const params = new URLSearchParams(window.location.search);
 

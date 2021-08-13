@@ -1,0 +1,1 @@
+document.getElementById('nav-product').classList.add('active')

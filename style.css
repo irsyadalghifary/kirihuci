@@ -30,35 +30,6 @@
     line-height: 23px;
 }
 
-.navbar-nav a {
-    color: #333333 !important;
-}
-
-.navbar-nav a:hover {
-    color: #DA4443 !important;
-}
-
-.navbar-nav ul a:hover {
-    color: #ffffff !important;
-    background-color: #DA4443 !important;
-}
-
-.navbar-nav ul a.link-active {
-    color: #ffffff !important;
-    background-color: #DA4443 !important;
-}
-
-.navbar-nav a.active {
-    color: #DA4443 !important;
-}
-
-.navbar-nav img.icon.img-active {
-    filter: invert(32%) sepia(90%) saturate(1096%) hue-rotate(330deg) brightness(92%) contrast(93%);
-}
-
-.navbar-nav .nav-link:hover {
-    filter: invert(32%) sepia(90%) saturate(1096%) hue-rotate(330deg) brightness(92%) contrast(93%);
-}
 
 .produk-nama {
     font-size: 14px;
@@ -210,3 +181,8 @@
 .my-pt-60 {
     padding-top: 60px;
 }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

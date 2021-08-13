@@ -1,0 +1,70 @@
+.navbar-nav a {
+    color: #333333 !important;
+}
+
+.navbar-nav a:hover {
+    color: #DA4443 !important;
+}
+
+.navbar-nav ul a:hover {
+    color: #ffffff !important;
+    background-color: #DA4443 !important;
+}
+
+.navbar-nav ul a.link-active {
+    color: #ffffff !important;
+    background-color: #DA4443 !important;
+}
+
+.nav-link.active {
+    color: #DA4443 !important;
+}
+
+.nav-link:hover *, .nav-link.active * {
+    filter: invert(26%) sepia(91%) saturate(1074%) hue-rotate(329deg) brightness(115%) contrast(91%);
+    color: #DA4443 !important;
+}
+
+.navbar-brand {
+    font-size: 14px; 
+    line-height: 15px;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 14px; 
+    line-height: 15px;
+    font-weight: bold;
+}
+
+.dropdown-toggle::after {
+    border-top: .3em solid #B1B1B1 !important;
+    vertical-align: 0 !important;
+}
+
+.dropdown-toggle:hover:after, .dropdown-toggle.active::after {
+    border-top-color: #DA4443 !important;
+}
+
+nav .btn:focus {
+    box-shadow: none !important;
+}
+
+nav .form-control:focus {
+    box-shadow: none !important;
+}
+
+#nav-search-bar {
+    background-color: initial !important;
+    border: 0 !important;
+}
+
+#nav-search-bar:focus {
+    background-color: initial !important;
+    border: 0 !important;
+}
+
+#nav-btn-login {
+    font-size: 14px; 
+    line-height: 15px;
+}

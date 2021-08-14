@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/skeleton.css" />
   <link rel="stylesheet" href="assets/css/product-detail.css" />
-  <link rel="stylesheet" href="assets/css/recom-carousel.css" />
+  <link rel="stylesheet" href="assets/css/carousel.css" />
   <link rel="icon" href="asset/icon.png" type="image/icon type" />
   
 
@@ -101,22 +101,19 @@
           <div class="row justify-content-center">
             <div id="product-image" class="skeleton mt-5" class="col"></div>
           </div>
-          <div class="row g-2 mt-2">
-            <div class="col-12 mx-auto">
-              <div id="additionalImgCarouselControls" class="carousel slide">
-                <div class="px-5">
-                  <div id="product-carousel-additional-image" class="d-flex align-items-center carousel-inner skeleton">
-                  </div>
-                </div>
-                <button class="carousel-control-prev m-auto" type="button"
-                  data-bs-target="#additionalImgCarouselControls" data-bs-slide="prev">
-                  <i class="fa fa-angle-left"></i>
-                </button>
-                <button class="carousel-control-next m-auto" type="button"
-                  data-bs-target="#additionalImgCarouselControls" data-bs-slide="next">
-                  <i class="fa fa-angle-right"></i>
-                </button>
-              </div>
+          <div id="additional-images-row" class="d-flex flex-row w-100 justify-content-between align-items-center mt-5 skeleton">
+            <div class="m-1">
+              <button id="additional-images-control-left" class="btn my-carousel-left my-auto wait-skeleton" type="button">
+                <i class="fa fa-angle-left"></i>
+              </button>
+            </div>
+            <div class="w-100">
+              <div id="additional-images-wrapper"></div>
+            </div>
+            <div class="m-1">
+              <button id="additional-images-control-right" class="btn my-carousel-right my-auto wait-skeleton" type="button">
+                <i class="fa fa-angle-right"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -168,80 +165,22 @@
         <!-- end product detail -->
       </div>
     </div>
-    <div id="recommendation" class="container my-pt-60">
-      <div class="row">
-        <h2 class="text-centertext-uppercase title separator">
-          Rekomendasi Produk Lainnya
-        </h2>
-        <div class="col-12 mx-auto pt-5">
-          <div id="recomCarouselControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="px-5">
-              <div id="product-carousel-recommendation" class="d-flex align-items-center carousel-inner skeleton"></div>
-            </div>
-            <button class="carousel-control-prev m-auto" type="button" data-bs-target="#recomCarouselControls"
-              data-bs-slide="prev">
-              <i class="fa fa-angle-left"></i>
-            </button>
-            <button class="carousel-control-next m-auto" type="button" data-bs-target="#recomCarouselControls"
-              data-bs-slide="next">
-              <i class="fa fa-angle-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
     
     <div id="recommendation" class="container my-pt-60">
       <h2 class="text-center text-uppercase title separator">
         Rekomendasi Produk Lainnya
       </h2>
-      <div class="d-flex flex-row w-100 justify-content-between align-items-center mt-5">
+      <div id="recommendation-row" class="d-flex flex-row w-100 justify-content-between align-items-center mt-5 skeleton">
         <div class="m-1">
-          <button class="btn recommendation-carousel-left my-auto" type="button">
+          <button id="recommendation-control-left" class="btn my-carousel-left my-auto wait-skeleton" type="button">
             <i class="fa fa-angle-left"></i>
           </button>
         </div>
-        <div class="flex-grow-1" style="max-width: 90%;">
-          <div id="recommendation-slider">
-            <div class="recommendation-product">
-              <img src="https://storage.googleapis.com/kirihuci-static.appspot.com/images/pie-susu-lembang-pisang-coklat-main.png" class="card-img-top">
-              <div class="text-center mt-3">
-                <div class="produk-nama text-uppercase">Pie Susu Lembang Matcha</div>
-                <p class="produk-text">Rp. 26.600,00</p>
-              </div>
-            </div>
-            <div class="recommendation-product">
-              <img src="https://storage.googleapis.com/kirihuci-static.appspot.com/images/pie-susu-lembang-matcha-main.png" class="card-img-top">
-              <div class="text-center mt-3">
-                <div class="produk-nama text-uppercase">Pie Susu Lembang Matcha</div>
-                <p class="produk-text">Rp. 26.600,00</p>
-              </div>
-            </div>
-            <div class="recommendation-product">
-              <img src="https://storage.googleapis.com/kirihuci-static.appspot.com/images/pie-susu-lembang-matcha-main.png" class="card-img-top">
-              <div class="text-center mt-3">
-                <div class="produk-nama text-uppercase">Pie Susu Lembang Matcha</div>
-                <p class="produk-text">Rp. 26.600,00</p>
-              </div>
-            </div>
-            <div class="recommendation-product">
-              <img src="https://storage.googleapis.com/kirihuci-static.appspot.com/images/pie-susu-lembang-pisang-coklat-main.png" class="card-img-top">
-              <div class="text-center mt-3">
-                <div class="produk-nama text-uppercase">Pie Susu Lembang Matcha</div>
-                <p class="produk-text">Rp. 26.600,00</p>
-              </div>
-            </div>
-            <div class="recommendation-product">
-              <img src="https://storage.googleapis.com/kirihuci-static.appspot.com/images/pie-susu-lembang-pisang-coklat-main.png" class="card-img-top">
-              <div class="text-center mt-3">
-                <div class="produk-nama text-uppercase">Pie Susu Lembang Matcha</div>
-                <p class="produk-text">Rp. 26.600,00</p>
-              </div>
-            </div>
-          </div>
+        <div class="w-100">
+          <div id="recommendation-wrapper"></div>
         </div>
         <div class="m-1">
-          <button class="btn recommendation-carousel-right my-auto" type="button">
+          <button id="recommendation-control-right"  class="btn my-carousel-right my-auto wait-skeleton" type="button">
             <i class="fa fa-angle-right"></i>
           </button>
         </div>
@@ -358,38 +297,7 @@
   <script src="assets/js/helper.js"></script>
   <script src="assets/js/product-detail.js"></script>
   <script>
-    let slider = tns({
-      //autoWidth: true,
-      container: '#recommendation-slider',
-      slideBy: 'page',
-      prevButton: '.recommendation-carousel-left',
-      nextButton: '.recommendation-carousel-right',
-      nav: false,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplayButtonOutput: false,
-      autoHeight: true,
-      speed: 1000,
-      preventActionWhenRunning: true,
-      responsive: {
-        540: {
-          items: 1,
-          gutter: 20,
-        },
-        720: {
-          items: 2,
-          gutter: 20,
-        },
-        960: {
-          items: 3,
-          gutter: 20,
-        },
-        1140: {
-          items: 4,
-          gutter: 20,
-        }
-      }
-    })
+    
   </script>
 </body>
 

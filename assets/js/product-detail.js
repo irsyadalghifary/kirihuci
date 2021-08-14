@@ -14,32 +14,50 @@ $(function () {
           const product = response[0]
           const product_image = $(`<img class="img-produk-main" src="${product['image']}"/>`)
 
-          const carousel_length = 4
-          let carousels = ''
+          let carousel = $('<div/>', { id: 'additional-images-slider' })
           const datas = product['additional_images']
-          for (let i = 0; i <= datas.length; i += carousel_length) {
-            carousels += `<div class='carousel-item ${i == 0 ? 'active': ''}'>`
-            carousels += '\n'
-            carousels += `<div class="row">`
-            for (let j = i; j < Math.min(i + carousel_length, datas.length); j++) {
-              const data = datas[j]
-              carousels += '\n'
-              carousels += `
-                <div class="col-${parseInt(12 / carousel_length)}">
-                  <img src="${data['image']}" class="img-produk-additional"/>
-                </div>
-              `
-            }
-            carousels += '</div> '
-            carousels += '\n'
-            carousels += '</div> '
+          for (let i = 0; i < datas.length; i++) {
+            const data = datas[i]
+            carousel.append(`
+              <div>
+                <img src="${data['image']}" class="card-img-top img-produk-additional">
+              </div>
+            `)
           }
           //carousel for additional images
           on_all_image_loaded({
-            envs: [$(product_image), $(carousels)],
+            envs: [$(product_image), $(carousel)],
             callback: () => {
               $('#product-image').html(product_image)
-              $('#product-carousel-additional-image').append(carousels)
+              $('#additional-images-wrapper').append(carousel)
+
+              _ = tns({
+                container: '#additional-images-slider',
+                slideBy: 'page',
+                prevButton: '#additional-images-control-left',
+                nextButton: '#additional-images-control-right',
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayButtonOutput: false,
+                speed: 1000,
+                preventActionWhenRunning: true,
+                gutter: 20,
+                responsive: {
+                  540: {
+                    items: 1,
+                  },
+                  720: {
+                    items: 2,
+                  },
+                  960: {
+                    items: 3,
+                  },
+                  1140: {
+                    items: 4,
+                  }
+                }
+              })
 
               $('#product-title').html(product['name'])
               $('#product-price').html(format_price(product['price']))
@@ -67,38 +85,53 @@ $(function () {
       url: recommendations_endpoint,
       type: 'GET',
       success: (response) => {
-        const carousel_length = 4
 
         const datas = response['data']
-        let carousels = ''
-        for (let i = 0; i <= response['count']; i += carousel_length) {
-          carousels += `<div class='carousel-item ${i == 0 ? 'active': ''}'>`
-          carousels += '\n'
-          carousels += `<div class="row">`
-          for (let j = i; j < Math.min(i + carousel_length, response['count']); j++) {
-            const data = datas[j]
-            carousels += '\n'
-            carousels += `
-              <div class="col-${parseInt(12 / carousel_length)}">
-                <div class="h-100">
-                  <img src="${data['image']}" class="card-img-top"/>
-                  <div class="text-center mt-3">
-                    <div class="produk-nama text-uppercase">${data['name']}</div>
-                    <p class="produk-text">${format_price(data['price'])}</p>
-                  </div>
-                </div>
+        let carousel = $('<div/>', { id: 'recommendation-slider' })
+        for (let i = 0; i < datas.length; i++) {
+          const data = datas[i]
+          carousel.append(`
+            <div class="recommendation-product">
+              <img src="${data['image']}" class="card-img-top">
+              <div class="text-center mt-3">
+                <div class="produk-nama text-uppercase">${data['name']}</div>
+                <p class="produk-text">${format_price(data['price'])}</p>
               </div>
-            `
-          }
-          carousels += '</div> '
-          carousels += '\n'
-          carousels += '</div> '
+            </div>
+          `)
         }
         //carousel_html
         on_all_image_loaded({
-          envs: [$(carousels)],
+          envs: [$(carousel)],
           callback: () => {
-            $('#product-carousel-recommendation').append(carousels)
+            $('#recommendation-wrapper').append(carousel)
+            _ = tns({
+              container: '#recommendation-slider',
+              slideBy: 'page',
+              prevButton: '#recommendation-control-left',
+              nextButton: '#recommendation-control-right',
+              nav: false,
+              autoplay: true,
+              autoplayTimeout: 5000,
+              autoplayButtonOutput: false,
+              speed: 1000,
+              preventActionWhenRunning: true,
+              gutter: 20,
+              responsive: {
+                540: {
+                  items: 1,
+                },
+                720: {
+                  items: 2,
+                },
+                960: {
+                  items: 3,
+                },
+                1140: {
+                  items: 4,
+                }
+              }
+            })
             $('#recommendation .skeleton').removeClass('skeleton')
             $('#recommendation .wait-skeleton').removeClass('wait-skeleton')
           }

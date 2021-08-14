@@ -6,6 +6,31 @@ let current_video_page = 1
 const photos_per_page = 6
 const videos_per_page = 4
 
+function get_youtube_thumbnail(url, quality = 'max') {
+  if (url) {
+    var video_id, thumbnail, result
+    if (result = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/)) {
+      video_id = result.pop()
+    } else if (result = url.match(/youtu.be\/(.{11})/)) {
+      video_id = result.pop()
+    }
+
+    if (video_id) {
+      var quality_key = 'maxresdefault'
+      if (quality == 'low') {
+        quality_key = 'sddefault'
+      } else if (quality == 'medium') {
+        quality_key = 'mqdefault'
+      } else if (quality == 'high') {
+        quality_key = 'hqdefault'
+      }
+
+      return `http://img.youtube.com/vi/${video_id}/${quality_key}.jpg`
+    }
+  }
+  return false;
+}
+
 $(function () {
   const draw_pagination = (item_total, current_page, item_per_page) => {
     let pagination_html = ''
@@ -40,7 +65,7 @@ $(function () {
         let photos = []
         for (let i = 0; i < response['count']; i++) {
           const data = datas[i]
-          photos.push($(`<img src="${data['source']}" class="w-100 h-auto" />`))
+          photos.push($(`<img src="${data['thumbnail']}" class="w-100 h-auto" />`))
         }
 
         on_all_image_loaded({
@@ -48,6 +73,12 @@ $(function () {
           callback: () => {
             for (let i = 0; i < photos.length; i++) {
               $(`#gallery-photo-${i + 1}`).html(photos[i])
+              $(`#gallery-photo-${i + 1}`).magnificPopup({
+                items: {
+                  src: datas[i]['source']
+                },
+                type: 'image'
+              })
             }
 
             for (let i = photos.length; i < photos_per_page; i++) {
@@ -80,7 +111,7 @@ $(function () {
         let videos = []
         for (let i = 0; i < response['count']; i++) {
           const data = datas[i]
-          videos.push($(`<img src="${data['source']}" class="w-100 h-auto" />`))
+          videos.push($(`<img src="${data['thumbnail']}" class="w-100 h-auto" />`))
         }
 
         on_all_image_loaded({
@@ -88,6 +119,21 @@ $(function () {
           callback: () => {
             for (let i = 0; i < videos.length; i++) {
               $(`#gallery-video-${i + 1}`).html(videos[i])
+              $(`#gallery-video-${i + 1}`).magnificPopup({
+                items: {
+                  src: datas[i]['source']
+                },
+                type: 'iframe',
+                iframe: {
+                  patterns: {
+                    youtube: {
+                      index: 'youtu.be',
+                      id: '/',
+                      src: '//www.youtube.com/embed/%id%'
+                    }
+                  }
+                }
+              })
             }
 
             for (let i = videos.length; i < videos_per_page; i++) {

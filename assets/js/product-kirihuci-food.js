@@ -9,18 +9,19 @@ $(function () {
   
     $.ajax({
       url: product_kirihuci_endpoint,
-      type: 'GET',    
-      success: (response) => {
-        const datas = response['data']
-
+      type: 'GET',
+      beforeSend: () => {
         // draw the skeleton for incoming product
-        for (let i = 0; i < response['count'] - new_product_limit; i++) {
+        for (let i = 0; i < 6; i++) {
           $('#product-kirihuci>.row').append(`
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div id="product-kirihuci-${i + 1}" class="skeleton"></div>
             </div>
           `)
         }
+      },
+      success: (response) => {
+        const datas = response['data']
 
         // draw the skeleton for incoming new product
         for (let i = 0; i < new_product_limit; i++) {

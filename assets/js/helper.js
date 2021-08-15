@@ -5,7 +5,7 @@ $(function () {
     const add_done = () => {
       done_count += 1
       if (done_count === envs.length) {
-        setTimeout(callback, 200)
+        setTimeout(callback, envs.length * 500)
       }
     }
 

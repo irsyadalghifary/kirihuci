@@ -1,0 +1,29 @@
+.my-carousel-right,
+.my-carousel-right:focus,
+.my-carousel-right:focus-visible,
+.my-carousel-left,
+.my-carousel-left:focus,
+.my-carousel-left:focus-visible {
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	padding        : 0;
+	top            : 0;
+	bottom         : 0;
+	height         : 30px;
+	width          : 30px;
+	background     : none;
+	border-radius  : 50%;
+	border         : 4px solid #b1b1b1b2;
+	box-shadow     : none !important;
+	outline        : 0 !important
+}
+
+.my-carousel-right .fa-angle-right,
+.my-carousel-left .fa-angle-left {
+	color: #b1b1b1b2;
+}
+
+.tns-outer {
+	display: grid;
+}

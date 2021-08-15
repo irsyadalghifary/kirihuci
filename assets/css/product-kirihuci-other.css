@@ -1,0 +1,15 @@
+.product-kirihuci-other-name {
+    font-size     : 18px;
+    font-family   : "reg";
+    font-style    : italic;
+    font-weight   : 600;
+    line-height   : 23px;
+    letter-spacing: 0.1em;
+    padding-top   : 8px;
+}
+
+.product-kirihuci-other-image {
+    width     : 100% !important;
+    min-height: 240px;
+    max-width : 100%;
+}

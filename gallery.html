@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/skeleton.css" />
   <link rel="stylesheet" href="assets/css/gallery.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" href="asset/icon.png" type="image/icon type" />
 
   <title>Kirihuci Indonesia</title>
@@ -97,22 +98,22 @@
         GALERI FOTO
       </p>
       <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 d-flex flex-wrap">
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
           <div id="gallery-photo-1" class="skeleton"></div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
           <div id="gallery-photo-2" class="skeleton"></div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
           <div id="gallery-photo-3" class="skeleton"></div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
           <div id="gallery-photo-4" class="skeleton"></div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
           <div id="gallery-photo-5" class="skeleton"></div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
           <div id="gallery-photo-6" class="skeleton"></div>
         </div>
       </div>
@@ -254,6 +255,10 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/helper.js"></script>
   <script src="assets/js/gallery.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

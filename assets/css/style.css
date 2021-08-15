@@ -171,6 +171,12 @@
   .produk-deskripsi {
     min-height: 280px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .produk-deskripsi {
+    min-height: 280px;
+  }
 
   .my-btn-red {
     width: fit-content;
@@ -180,7 +186,7 @@
     text-decoration: none;
     color: white;
     position: relative;
-    right: -400px;
+    right: -280px;
     bottom: 60px;
   }
 }
@@ -201,7 +207,7 @@
   text-decoration: none;
   color: white;
   position: relative;
-  right: -400px;
+  right: -450px;
   bottom: 60px;
 }
 

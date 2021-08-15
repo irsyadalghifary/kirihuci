@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/skeleton.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" href="asset/icon.png" type="image/icon type" />
 
   <title>Kirihuci Indonesia</title>
@@ -138,7 +139,7 @@
         tekstur yang renyah, rasa yang menggugah, dan tanpa bahan pengawet.
         Cocok untuk dijadikan oleh-oleh ataupun disantap bersama keluarga atau kerabat.</p>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="h-100">
             <img src="asset/KirihuciPedas_Detail.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -147,7 +148,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="h-100">
             <img src="asset/KirihuciBbq_Detail.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -156,7 +157,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="h-100">
             <img src="asset/KirihuciBalado_Detail.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -177,9 +178,9 @@
         Teksturnya yang lembut dan gak terlalu lengket cocok untuk dijadikan olahan berbagai aneka masakan dan
         makanan.</p>
       <div class="row justify-content-between">
-        <div class="col">
-          <img src="asset/kanji.png" alt="" height="300" width="600">
-          <a class="btn my-btn-red m-auto" href="#">Lihat Produk <svg class="svg-inline--fa fa-chevron-right fa-w-10"
+        <div class="col-12 col-lg-6" data-aos="zoom-in">
+          <img src="asset/kanji.png" alt="" class="position-relative w-100 h-auto">
+          <a class="btn my-btn-red" href="#">Lihat Produk <svg class="svg-inline--fa fa-chevron-right fa-w-10"
               aria-hidden="true" focusable="false" data-prefix="fa" data-icon="chevron-right" role="img"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
               <path fill="currentColor"
@@ -187,9 +188,9 @@
               </path>
             </svg><!-- <i class="fa fa-chevron-right"></i> Font Awesome fontawesome.com --></a>
         </div>
-        <div class="col mt-4 mt-sm-0">
-          <img src="asset/mobi.png" alt="" height="300" width="600">
-          <a class="btn my-btn-red m-auto" href="#">Lihat Produk <svg class="svg-inline--fa fa-chevron-right fa-w-10"
+        <div class="col-12 col-lg-6 mt-4 mt-sm-0" data-aos="zoom-in">
+          <img src="asset/mobi.png" alt="" class="position-relative w-100 h-auto">
+          <a class="btn my-btn-red" href="#">Lihat Produk <svg class="svg-inline--fa fa-chevron-right fa-w-10"
               aria-hidden="true" focusable="false" data-prefix="fa" data-icon="chevron-right" role="img"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
               <path fill="currentColor"
@@ -207,7 +208,7 @@
       <p class="text-center caption mb-5">Selain produk Kirihuci, kami juga menyediakan produk tenants lainnya,
         yaitu snack dan oleh-oleh khas Jawa Barat yang banyak diminati oleh wisatawan.</p>
       <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="h-100">
             <img src="asset/Eggroll_Singkong.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -216,7 +217,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="fade-up" data-aos-delay="50">
           <div class="h-100">
             <img src="asset/BrowniesPanggangKacangAlmond.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -225,7 +226,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="fade-up" data-aos-delay="100">
           <div class="h-100">
             <img src="asset/BrowniesPanggangAlmondKeju.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -234,7 +235,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="fade-up" data-aos-delay="150">
           <div class="h-100">
             <img src="asset/PieSusuLembang_Mix.jpg" class="card-img-top" alt="...">
             <div class="text-center mt-3">
@@ -354,6 +355,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/helper.js"></script>
   <script src="assets/js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>

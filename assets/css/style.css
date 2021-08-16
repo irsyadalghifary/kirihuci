@@ -83,6 +83,10 @@
   color: white;
 }
 
+.my-btn-red:hover {
+  color: white;
+}
+
 .separator {
   display: flex;
   align-items: center;

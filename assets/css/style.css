@@ -156,7 +156,7 @@
     min-height: 280px;
   }
 
-  .my-btn-red {
+  /* .my-btn-red {
     width: fit-content;
     border-radius: 50px;
     background: #da4443;
@@ -164,10 +164,10 @@
     text-decoration: none;
     color: white;
     position: relative;
-    right: -450px;
+    right: -450px !important;
     bottom: 60px;
     top: -80px;
-  }
+  } */
 }
 
 .my-pt-120 {
@@ -186,6 +186,7 @@
   text-decoration: none;
   color: white;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 input[type="search"]::-webkit-search-decoration,
